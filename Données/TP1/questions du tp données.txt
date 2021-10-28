@@ -1,0 +1,17 @@
+1)Si un utilisateur obtient une solution valide, il peut la coder avec SHA1 après y avoir ajouté
+un nombre aléatoire. Lorsque le correcteur essaiera sa proposition, il pourra comparer à partir
+des couleurs et des hachés des différentes arêtes qu'il obtient les mêmes valeurs en refaisant
+ces calculs, et que les couleurs données sont différente. Il prouve donc que la solution
+proposée valide la non adjacence de deux sommets de couleurs identiques.
+
+2)Si un utilisateur souhaite proposer une fausse preuve, il devra créer
+Si un utilisateur essaie de proposer une fausse combinaison, il devra créer une combinaison qui
+sera suffisamment proche d'une combinaison valide pour tromper les tests effectués par le
+correcteur. Cependant, le grand nombre de test ( 400 ) couplé au nombre d'arêtes testables
+rend très improbable la possibilité d'avoir une arrête fausse, mais de ne jamais la tester, cette
+probabilité valant ( (nb_arête-1)/nb_arête )^400, ce qui tend vers 3.1*10^-6 pour un nombre de 50 arêtes
+
+3)La décision de ne donner au correcteur que les haché de la somme entre les couleurs et les
+entiers aléatoirements choisis empêche le correcteur de retrouver la valeur des couleurs
+initialement utilisées, il peut uniquement vérifier si deux couleurs sont identiques ou différentes
+, ce qui l'assure du respect de la consigne mais l'empêche de déterminer les couleurs utilisées.
